@@ -190,7 +190,7 @@ class Actions {
             m.put(index, counter);
         }
 
-        List sortedKeys = new ArrayList(m.keySet());
+        List<Integer> sortedKeys = new ArrayList<>(m.keySet());
         Collections.sort(sortedKeys);
 
         for (Object k : sortedKeys) {
