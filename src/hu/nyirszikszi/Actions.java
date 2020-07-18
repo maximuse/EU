@@ -192,6 +192,7 @@ class Actions {
 
         List<Integer> sortedKeys = new ArrayList<>(m.keySet());
         Collections.sort(sortedKeys);
+        Collections.reverse(sortedKeys);
 
         for (Object k : sortedKeys) {
             result.append(k).append(" - ").append(m.get(k)).append(" ország\n\t");
