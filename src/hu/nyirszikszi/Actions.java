@@ -4,6 +4,8 @@ import java.io.RandomAccessFile;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 
 class Actions {
@@ -76,7 +78,7 @@ class Actions {
             }
         }
 
-        return "4. feladat: " + country + " csatlakozásának dátuma: " + date;
+        return "5. feladat: " + country + " csatlakozásának dátuma: " + date;
     }
 
     static String task6(String month) {
@@ -157,10 +159,16 @@ class Actions {
             }
         }
 
-        return "5. feladat: " + month.substring(0, 1).toUpperCase() + month.substring(1) + "-ban/ben " + ((r) ? "volt" : "nem volt") + " csatlakozás!";
+        return "6. feladat: " + month.substring(0, 1).toUpperCase() + month.substring(1) + "-ban/ben " + ((r) ? "volt" : "nem volt") + " csatlakozás!";
     }
 
-    static void task7() {
+    static String task7() {
+        Actions.getList().sort(Comparator.comparing(Eu::getDatum));
 
+        return "7. feladat: Legutoljára csatlakozott ország: " + Actions.getList().get(Actions.getList().size() - 1).getOrszag();
+    }
+
+    static String task8() {
+        return null;
     }
 }
