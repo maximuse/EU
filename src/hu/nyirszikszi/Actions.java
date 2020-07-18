@@ -164,8 +164,9 @@ class Actions {
 
     static String task7() {
         Actions.getList().sort(Comparator.comparing(Eu::getDatum));
+        Collections.reverse(Actions.getList());
 
-        return "7. feladat: Legutoljára csatlakozott ország: " + Actions.getList().get(Actions.getList().size() - 1).getOrszag();
+        return "7. feladat: Legutoljára csatlakozott ország: " + Actions.getList().get(0).getOrszag();
     }
 
     static String task8() {
