@@ -190,7 +190,10 @@ class Actions {
             m.put(index, counter);
         }
 
-        for (Integer k : m.keySet()) {
+        List sortedKeys = new ArrayList(m.keySet());
+        Collections.sort(sortedKeys);
+
+        for (Object k : sortedKeys) {
             result.append(k).append(" - ").append(m.get(k)).append(" ország\n\t");
         }
 
