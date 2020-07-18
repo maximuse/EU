@@ -8,5 +8,6 @@ public class Main {
         System.out.println(Actions.task5("Magyarország"));
         System.out.println(Actions.task6("május"));
         System.out.println(Actions.task7());
+        System.out.println(Actions.task8());
     }
 }

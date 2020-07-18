@@ -2,11 +2,7 @@ package hu.nyirszikszi;
 
 import java.io.RandomAccessFile;
 import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
+import java.util.*;
 
 class Actions {
     private static ArrayList<Eu> list = new ArrayList<>();
@@ -170,6 +166,34 @@ class Actions {
     }
 
     static String task8() {
-        return null;
+        TreeSet<Integer> ts = new TreeSet<>();
+        Map<Integer, Integer> m = new HashMap<>();
+        int counter;
+        StringBuilder result = new StringBuilder("\t");
+
+        Actions.getList().sort(Comparator.comparing(Eu::getDatum));
+        Collections.reverse(Actions.getList());
+
+        for (int i = 0; i < Actions.getList().size(); i++) {
+            ts.add(Integer.parseInt(getSplittedDate(Actions.getList().get(i).getDatum())[0]));
+        }
+
+        for (Integer index : ts) {
+            counter = 0;
+
+            for (int i = 0; i < Actions.getList().size(); i++) {
+                if (index == Integer.parseInt(getSplittedDate(Actions.getList().get(i).getDatum())[0])) {
+                    counter++;
+                }
+            }
+
+            m.put(index, counter);
+        }
+
+        for (Integer k : m.keySet()) {
+            result.append(k).append(" - ").append(m.get(k)).append(" ország\n\t");
+        }
+
+        return "8. feladat: Statisztika\n" + result.toString();
     }
 }
