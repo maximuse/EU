@@ -13,16 +13,8 @@ class Eu {
         return orszag;
     }
 
-    void setOrszag(String orszag) {
-        this.orszag = orszag;
-    }
-
     String getDatum() {
         return datum;
-    }
-
-    void setDatum(String datum) {
-        this.datum = datum;
     }
 
     @Override
