@@ -80,12 +80,12 @@ class Actions {
     }
 
     static String task6(String month) {
-        String m = new String(month.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
         String mth = null;
         String[] date;
+        String m;
         boolean r = false;
 
-        switch (m) {
+        switch (month) {
             case "január":
             case "1":
             case "01":
@@ -161,6 +161,6 @@ class Actions {
     }
 
     static void task7() {
-        
+
     }
 }
