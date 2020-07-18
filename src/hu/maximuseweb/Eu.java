@@ -1,6 +1,4 @@
-package hu.nyirszikszi;
-
-import java.util.Date;
+package hu.maximuseweb;
 
 class Eu {
     private String orszag;
