@@ -197,6 +197,6 @@ class Actions {
             result.append(k).append(" - ").append(m.get(k)).append(" ország\n\t");
         }
 
-        return "8. feladat: Statisztika\n" + result.toString();
+        return "8. feladat: Statisztika\n" + result;
     }
 }
